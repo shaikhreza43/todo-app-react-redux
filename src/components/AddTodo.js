@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../redux/todoSlice';
 
 export default function AddTodo(props) {
 
     const [todoName, setTodoName] = useState('');
+
+    const dispatch = useDispatch();
 
     const handleAddTodo = async (e) => {
         e.preventDefault();
@@ -10,6 +14,7 @@ export default function AddTodo(props) {
             alert("Todo Name Cannot be Empty");
             return;
         }
+        dispatch(addTodo({ todoName }));
     }
 
     return (
