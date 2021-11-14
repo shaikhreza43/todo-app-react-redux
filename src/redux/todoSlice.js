@@ -3,10 +3,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const todoSlice = createSlice({
     name: "todos",
     initialState: [
-        { id: 1, todoName: "Todo 1", completed: true },
-        { id: 2, todoName: "Todo 2", completed: false },
-        { id: 3, todoName: "Todo 3", completed: true },
-        { id: 4, todoName: "Todo 4", completed: false }
+        { id: 1, todoName: "Purchase a new smartphone and a smartwatch", completed: false },
+        { id: 2, todoName: "Get my knee surgery done", completed: true },
+        { id: 3, todoName: "Save 30k every month", completed: false },
+        { id: 4, todoName: "Plan for a trip to Ajmer", completed: false }
     ],
     reducers: {
         addTodo: (state, action) => {
